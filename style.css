@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
+
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    font-family: 'Inter', sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Center mein perfect dikhega */
+    overflow: hidden;
+    overscroll-behavior: none;
+}
+
+.container {
+    background: rgba(255, 255, 255, 0.98);
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+    width: 90%;
+    max-width: 400px;
+    max-height: 85vh; /* Screen ka 85% area lega */
+    display: flex;
+    flex-direction: column;
+}
+
+h1 { text-align: center; color: #333; margin: 0 0 20px 0; font-size: 24px; }
+
+input {
+    width: 100%;
+    padding: 12px;
+    margin: 6px 0;
+    border: 2px solid #eaeaea;
+    border-radius: 8px;
+    box-sizing: border-box;
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    background: #764ba2;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+/* List ka logic: Ye flex-grow se bachi hui jagah le lega */
+#subject-list { 
+   
+    list-style: none; 
+    padding: 0; 
+    margin-top: 20px; 
+    flex-grow: 1; 
+    overflow-y: auto; 
+    padding-right: 5px;
+    max-height: 200px; /* Isay 200px kar do, ab list jahan 200px se bari hogi, scrollbar aa jaye ga */
+
+}
+
+/* Scrollbar design */
+#subject-list::-webkit-scrollbar { width: 5px; }
+#subject-list::-webkit-scrollbar-thumb { background: #b8a2d3; border-radius: 10px; }
+
+#subject-list li {
+    background: #f8f9fa;
+    padding: 12px 15px;
+    margin-bottom: 10px;
+    border-left: 5px solid #764ba2;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.delete-btn {
+    width: auto;
+    margin: 0;
+    padding: 6px 12px;
+    background: #ff4757;
+    font-size: 12px;
+    flex-shrink: 0;
+}
+
+/* --- Mobile Responsive Adjustment --- */
+@media (max-width: 480px) {
+    .container {
+        padding: 20px;
+        border-radius: 15px; 
+        width: 95%; 
+    }
+    
+    button {
+        padding: 16px; 
+        font-size: 17px;
+    }
+
+    h1 {
+        font-size: 20px; 
+    }
+}
