@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ExamBuddy | Smart Planner</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>ExamBuddy Planner</h1>
+        <!-- index.html -->
+<div id="input-section">
+    <input type="text" id="subject" placeholder="Subject Name">
+    <input type="number" id="weightage" placeholder="Weightage (e.g., 60)">
+    <input type="number" id="total-hours" placeholder="Total Study Hours Available (e.g., 5)">
+    <button onclick="addSubject()">Add to Plan</button>
+</div>
+        <div id="plan-display">
+            <h3>Your Daily Schedule</h3>
+            <ul id="subject-list"></ul>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
